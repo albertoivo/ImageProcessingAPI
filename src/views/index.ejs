@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Rocketseat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <div class="navbar">A collection of useful tools for manipulating IMAGE files.</div>
+    <div class="content">
+      <div class="card" onclick="show('resize')">Resize</div>
+      <a class="card" href="/processedimages">Processed Images</a>
+    </div>
+    <hr />
+    <div class="tools">
+      <div style="display: none" id="resize"><%- include('tools/resize'); %></div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>

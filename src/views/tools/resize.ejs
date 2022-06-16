@@ -1,0 +1,40 @@
+<h1>Resize</h1>
+<fieldset>
+  <legend>Parameters</legend>
+  <ul>
+    <li><code>Width</code></li>
+    <li><code>Height</code></li>
+    <li>Methods:</li>
+    <ul>
+      <li><code>cover</code>: Preserving aspect ratio, ensure the image covers both provided dimensions by cropping/clipping to fit.</li>
+      <li><code>contain</code>: Preserving aspect ratio, contain within both provided dimensions using "letterboxing" where necessary.</li>
+      <li><code>fill</code>: Ignore the aspect ratio of the input and stretch to both provided dimensions.</li>
+      <li><code>inside</code>: Preserving aspect ratio, resize the image to be as large as possible while ensuring its dimensions are less than or equal to both those specified.</li>
+      <li><code>outside</code>: Preserving aspect ratio, resize the image to be as small as possible while ensuring its dimensions are greater than or equal to both those specified.</li>
+    </ul>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <legend>URL Model</legend>
+  <p>http://localhost:3333/resize?fileInput=FILENAME&width=WIDTH&height=HEIGHT&method=METHOD</p>
+</fieldset>
+
+<fieldset>
+  <legend>Result</legend>
+  <p>The result is on <a href="processedimages">Processed Images</a> with the name in the pattern <code>FILENAME-WIDTHxHEIGHT-METHOD.jpg</code></p>
+</fieldset>
+
+<fieldset>
+  <legend>Success Examples</legend>
+  <p><a href="http://localhost:3333/resize?fileInput=sunset.jpg&width=500&height=50&method=contain">http://localhost:3333/resize?fileInput=sunset.jpg&width=500&height=50&method=contain</a></p>
+  <p><a href="http://localhost:3333/resize?fileInput=sunset.jpg&width=233&height=159&method=fill">http://localhost:3333/resize?fileInput=sunset.jpg&width=233&height=159&method=fill</a></p>
+  <p><a href="http://localhost:3333/resize?fileInput=sunset.jpg&width=100&height=50&method=cover">http://localhost:3333/resize?fileInput=sunset.jpg&width=100&height=50&method=cover</a></p>
+</fieldset>
+
+<fieldset>
+  <legend>Error Examples</legend>
+  <p><a href="http://localhost:3333/resize?fileInput=sunset.jpg&width=a&height=50&method=contain">http://localhost:3333/resize?fileInput=sunset.jpg&width=a&height=50&method=contain</a></p>
+  <p><a href="http://localhost:3333/resize?fileInput=sunset.jpg&width=-233&height=159&method=fill">http://localhost:3333/resize?fileInput=sunset.jpg&width=-233&height=159&method=fill</a></p>
+  <p><a href="http://localhost:3333/resize?fileInput=sunset.jpg&width=0&height=50&method=cover">http://localhost:3333/resize?fileInput=sunset.jpg&width=0&height=50&method=cover</a></p>
+</fieldset>
