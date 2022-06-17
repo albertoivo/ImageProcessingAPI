@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import { json } from 'body-parser'
 import express, { Request, Response } from 'express'
 import sharp from 'sharp'
 import { resize } from './services'
