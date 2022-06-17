@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express'
 import sharp from 'sharp'
 import { resize } from './services'
-import { isLetter } from './util'
 
 export const router = express.Router()
 
@@ -41,11 +40,6 @@ router.get('/resize', (req: Request, res: Response): void => {
 
   if (width < 1 || height <= 1) {
     res.status(400).send('Width and Height must be bigger than 0.')
-    return
-  }
-
-  if (isLetter(width) || isLetter(height)) {
-    res.status(400).send('Width and Height must be numbers')
     return
   }
 
