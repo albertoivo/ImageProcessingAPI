@@ -15,7 +15,7 @@ export const resize = (res: Response, filename: string, width: number, height: n
       .toFile(path.join(__dirname, '/assets', newName))
 
   } catch (e) {
-    res.redirect('/erro')
+    res.redirect('/erro', e)
   }
 
   return res.status(200)
