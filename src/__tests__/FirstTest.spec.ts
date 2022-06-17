@@ -6,6 +6,7 @@ const app = express()
 app.use(require('../routes'))
 
 jest.useFakeTimers()
+jest.setTimeout(30000)
 
 describe('GET /health', () => {
   it('The app is online', (done) => {

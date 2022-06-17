@@ -1,7 +1,9 @@
 // eslint-disable-next-line no-unused-vars
+import { json } from 'body-parser'
 import express, { Request, Response } from 'express'
 import sharp from 'sharp'
 import { resize } from './services'
+import { isLetter } from './util'
 
 export const router = express.Router()
 
@@ -26,6 +28,7 @@ router.get('/resize', (req: Request, res: Response): void => {
 
   if (!file) {
     res.status(400).send('No files were uploaded.')
+    return
   }
 
   type MethodStrings = keyof typeof sharp.fit
@@ -33,23 +36,31 @@ router.get('/resize', (req: Request, res: Response): void => {
   const width = req.query && req.query.width && +req.query.width
   const height = req.query && req.query.height && +req.query.height
 
-  if (!width || !height) {
-    res.status(400).send('Width and Height are mandatories fields')
-  }
-
-  if (isNaN(width) || isNaN(height)) {
-    res.status(400).send('Width and Height must be numbers.')
+  if (width == null || height == null) {
+    res.status(400).send('Width and Height are mandatories fields.')
+    return
   }
 
   if (width < 1 || height <= 1) {
     res.status(400).send('Width and Height must be bigger than 0.')
+    return
+  }
+
+  if (isLetter(width) || isLetter(height)) {
+    res.status(400).send('Width and Height must be numbers')
+    return
+  }
+
+  if (isNaN(width) || isNaN(height)) {
+    res.status(400).send('Width and Height must be numbers.')
+    return
   }
 
   const method: MethodStrings = req.query.method as MethodStrings
 
-  resize(res, file.toString(), width, height, method)
+  const resizeResponse = resize(res, file.toString(), width, height, method)
 
-  res.render('result', {})
+  res.render('result', { resizeResponse })
 })
 
 module.exports = router
