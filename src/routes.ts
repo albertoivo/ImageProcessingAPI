@@ -16,9 +16,12 @@ router.get('/', (request: Request, response: Response): void => {
   return response.render('index')
 })
 
-router.get('/health', function (request: Request, response: Response): Response {
-  return response.status(200).json({ success: true })
-})
+router.get(
+  '/health',
+  function (request: Request, response: Response): Response {
+    return response.status(200).json({ success: true })
+  }
+)
 
 router.get('/resize', (req: Request, res: Response): void => {
   const file = req.query.fileInput
