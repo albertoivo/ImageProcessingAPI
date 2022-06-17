@@ -5,6 +5,7 @@
 -   [Prerequisites](#prerequisites)
 -   [Quick start](#quick-start)
 -   [Build for production](#build-for-production)
+-   [Lint](#lint)
 -   [Limitations](#limitations)
 -   [Developed with](#developed-with)
 -   [Contributing](#contributing)
@@ -47,6 +48,10 @@ To run the tests:
 1. `npm start`
 
 It will open your browser at `http://localhost:3333`
+
+## Lint
+
+1. `npm run lint`
 
 ## Limitation
 
