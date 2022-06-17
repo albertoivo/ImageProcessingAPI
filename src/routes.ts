@@ -50,9 +50,9 @@ router.get('/resize', (req: Request, res: Response): void => {
 
   const method: MethodStrings = req.query.method as MethodStrings
 
-  const resizeResponse = resize(res, file.toString(), width, height, method)
+  resize(file.toString(), width, height, method)
 
-  res.render('result', { resizeResponse })
+  res.status(200).render('result')
 })
 
 module.exports = router

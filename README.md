@@ -30,7 +30,7 @@ It will open your browser at `http://localhost:3333`
 After running the project, copy and paste the URLs below in your browser or run the `cURL` on terminal:
 
 1. [http://localhost:3333/resize?fileInput=sunset.jpg&width=100&height=100&method=contain']()
-1. `curl --request GET --url 'http://localhost:3333/resize?fileInput=eu.jpg&width=500&height=50&method=contain'`
+1. `curl --request GET --url 'http://localhost:3333/resize?fileInput=sunset.jpg&width=500&height=50&method=contain'`
 
 The result of the resizing operation you can see at <a href='http://localhost:3333/processedimages/'>http://localhost:3333/processedimages/</a>
 
