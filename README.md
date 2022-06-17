@@ -2,14 +2,14 @@
 
 ## Table of contents
 
--   [Prerequisites](#prerequisites)
--   [Quick start](#quick-start)
--   [Build for production](#build-for-production)
--   [Lint](#lint)
--   [Limitations](#limitations)
--   [Developed with](#developed-with)
--   [Contributing](#contributing)
--   [Author](#author)
+- [Prerequisites](#prerequisites)
+- [Quick start](#quick-start)
+- [Build for production](#build-for-production)
+- [Lint](#lint)
+- [Limitations](#limitations)
+- [Developed with](#developed-with)
+- [Contributing](#contributing)
+- [Author](#author)
 
 ## Prerequisites
 
@@ -59,17 +59,17 @@ It will open your browser at `http://localhost:3333`
 
 ## Developed with
 
-* [Node.js](https://nodejs.org/)
-* [Typescript](https://www.typescriptlang.org/)
-* [Express](https://expressjs.com/)
-* [Sharp](https://sharp.pixelplumbing.com/)
+- [Node.js](https://nodejs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/)
+- [Sharp](https://sharp.pixelplumbing.com/)
 
 ## Contributing
 
 I welcome contributions to this project!
 
--   ⇄ Pull requests and ★ Stars are always welcome.
+- ⇄ Pull requests and ★ Stars are always welcome.
 
 ## Author
 
-* **Alberto Ivo Vieira** - [Github](https://github.com/albertoivo) | [LinkedIn](https://www.linkedin.com/in/alberto-ivo-vieira/)
+- **Alberto Ivo Vieira** - [Github](https://github.com/albertoivo) | [LinkedIn](https://www.linkedin.com/in/alberto-ivo-vieira/)
