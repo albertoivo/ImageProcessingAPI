@@ -49,9 +49,9 @@ To run the tests:
 
 It will open your browser at `http://localhost:3333`
 
-## Lint
+## ESLint (Prettier)
 
-1. `npm run lint`
+1. `npm run eslint`
 
 ## Limitation
 
