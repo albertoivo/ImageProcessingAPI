@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import sharp from 'sharp'
-import { resize } from './services'
+import { resize } from './sharp'
 
 export const router = express.Router()
 

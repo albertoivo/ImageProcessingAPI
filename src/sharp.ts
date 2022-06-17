@@ -13,7 +13,6 @@ export const resize = (res: Response, filename: string, width: number, height: n
     sharp(path.join(__dirname, '/assets', filepath))
       .resize(width, height, { fit: method })
       .toFile(path.join(__dirname, '/assets', newName))
-
   } catch (e) {
     res.redirect('/erro', e)
   }
