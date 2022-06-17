@@ -9,7 +9,7 @@
     "start": "node dist/server.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
     "test": "jest --detectOpenHandles",
-    "eslint": "eslint . --ext .ts",
+    "eslint": "eslint . --ext .ts --fix",
     "prettier": "prettier --single-quote --trailing-comma none  ."
   },
   "devDependencies": {
